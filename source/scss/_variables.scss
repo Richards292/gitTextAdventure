@@ -3,8 +3,14 @@ $deep-blue: #04c;
 $sea-green: #008fb3;
 
 $imgMountainScape: url("../../assets/landscape.jpg");
+
+// col defines variables used to alter colors.
 $colTitle: $deep-blue;
 $colHover: $sea-green;
+
+// shape defines a variable used to alter element shape.
 $shapeRounded: 40px;
-$sizeFont: 20px;
 $shapePadding: 20px;
+
+// size defines a variable used to alter element size.
+$sizeFont: 20px;

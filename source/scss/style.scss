@@ -4,12 +4,14 @@ body {
   background-image: $imgMountainScape;
 }
 
+// "Ready for Adventure?"
 .titleCard {
   margin-top: 300px;
   margin-left: 285px;
   color: $colTitle;
 }
 
+// Start!
 .startBtn {
   margin-left: 445px;
   background-color: $colTitle;
@@ -21,15 +23,20 @@ body {
   padding-right: 10px;
 }
 
+// Hovering Start!
 .startBtn:hover {
   margin-top: -1.5px;
   color: white;
 }
 
+// Focusing Start!
 .startBtn:focus {
   outline: 0;
 }
 
+// I might use this later, so I don't want to delete it. I wanted to make a "storybook" that would track the users choices.
+
+/*
 .storyBook {
   border: 3px;
   border-radius: $shapeRounded;
@@ -51,3 +58,4 @@ body {
   color: lighten($colTitle, 40%);
   text-align: center;
 }
+*/
