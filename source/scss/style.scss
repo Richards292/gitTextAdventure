@@ -1,0 +1,53 @@
+@import "_variables.scss";
+
+body {
+  background-image: $imgMountainScape;
+}
+
+.titleCard {
+  margin-top: 300px;
+  margin-left: 285px;
+  color: $colTitle;
+}
+
+.startBtn {
+  margin-left: 445px;
+  background-color: $colTitle;
+  color: white;
+  border-radius: $shapeRounded;
+  border: none;
+  font-size: $sizeFont;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.startBtn:hover {
+  margin-top: -1.5px;
+  color: white;
+}
+
+.startBtn:focus {
+  outline: 0;
+}
+
+.storyBook {
+  border: 3px;
+  border-radius: $shapeRounded;
+  border-style: solid;
+  border-color: lighten($colTitle, 30%);
+  margin-left: 900px;
+  margin-top: -350px;
+  height: 350px;
+  width: 400px;
+  padding-left: 20px;
+}
+
+.storyBook p {
+  color: lighten($colTitle, 40%);
+  font-size: $sizeFont;
+}
+
+.storyBookTitle {
+  color: lighten($colTitle, 40%);
+  text-align: center;
+}
