@@ -9,6 +9,22 @@ function startGame () {
 
   // GETTING THE PLAYER'S NAME
   if (playerName) {
+    var action = window.confirm('Your name is ' + playerName + '?')
+
+    while (!action || action === '' || action === null || action === undefined) {
+      playerName = window.prompt('Well, what is your name then?')
+
+      if (!playerName) {
+        playerName = window.prompt('You don\'t have to tell me your name, but i\'m calling you \'player\' if you don\'t. Where\'s the immersion in that?')
+
+        if (!playerName) {
+          playerName = 'Player'
+          break
+        }
+      }
+      action = window.confirm('Your name is ' + playerName + '?')
+    }
+
     window.alert('Nice to meet you, ' + playerName + '! ')
 
   // PLAYER DIDN'T ENTER ANYTHING
@@ -17,6 +33,24 @@ function startGame () {
 
     // PLAYER INPUT NAME
     if (playerName) {
+      action = window.confirm('Your name is ' + playerName + '?')
+
+      while (!action) {
+        playerName = window.prompt('Well, what is your name then?')
+
+        if (!playerName) {
+          playerName = window.prompt('You don\'t have to tell me your name, but i\'m calling you \'player\' if you don\'t. Where\'s the immersion in that?')
+        }
+
+        if (!playerName) {
+          window.alert('In that case, it\'s nice to meet you, player!')
+          playerName = 'Player'
+          break
+        }
+
+        action = window.confirm('Your name is ' + playerName + '?')
+      }
+
       window.alert('Nice to meet you, ' + playerName + '! ')
 
     // PLAYER DIDN'T INPUT ANYTHING AGAIN.
@@ -30,7 +64,7 @@ function startGame () {
 
   // BEGIN STEP 1: WEAPON SELECT
   function armUp () { // FIRST WEAPON SELECT
-    var weapon = window.prompt('Legend tells of a great artifact hidden at the top of the nearby mountain, however this mountain is treacherous! What will you bring to defend yourself?')
+    var weapon = window.prompt('Legend tells of a great artifact hidden at the top of the nearby mountain, however this mountain is treacherous! What will you bring to defend yourself? Our trusty blacksmith has a number of armaments at his disposal, ask away and see if he has it!')
 
     // CLEAN THE INPUT
     weapon = weapon.toLowerCase().trim()
@@ -78,7 +112,7 @@ function startGame () {
   // END WEAPON SELECT
 
   // BEGIN THE JOURNEY
-  var action = ''
+  action = ''
   window.alert('Now, armed with your trusty ' + weapon + ', it\'s time to embark on your journey! You arrive at the base of a cold mountain path')
 
   // Let the user pick a path. Error traps.
